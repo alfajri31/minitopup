@@ -1,0 +1,16 @@
+### Send POST request with json body
+POST http://localhost:8080/kafka/send
+Content-Type: application/json
+
+{
+  "id": 999,
+  "message" : "Halo"
+}
+
+###
+# curl -X GET "localhost:9200/_cluster/health?pretty"
+GET localhost:9200/_cluster/health?pretty
+
+### Simple WebSocket Request
+// connect to websocket
+WEBSOCKET ws://localhost:8083/chat

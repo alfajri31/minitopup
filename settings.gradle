@@ -1,0 +1,13 @@
+pluginManagement {
+    repositories {
+        maven { url 'https://repo.spring.io/milestone' }
+        maven { url 'https://repo.spring.io/snapshot' }
+        gradlePluginPortal()
+    }
+}
+rootProject.name = 'topup'
+include 'topup-eureka'
+include 'topup-api'
+include 'topup-schedule'
+include 'topup-admin'
+include 'kafka-consumer-node'
