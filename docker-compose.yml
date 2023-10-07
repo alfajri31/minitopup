@@ -20,28 +20,28 @@ services:
 #      - 8080:8071
 #    networks:
 #      - my_services
-#  h2: #use jdbc:h2:tcp://localhost/test
-#    container_name: h2
-#    build:
-#      context: /
-#      dockerfile: Dockerfile
-#    ports:
-#      - '9092:9092'
-#      - '8085:8082'
-#    volumes:
-#      - h2-data:/opt/h2-data
-#    networks:
-#      - my_services
-  topup-schedule-server:
-    container_name: topup-schedule-server
+  h2: #use jdbc:h2:tcp://localhost/test
+    container_name: h2
     build:
-      context: /topup-schedule
+      context: /
       dockerfile: Dockerfile
-    image: topup-schedule:latest
     ports:
-      - 8081:8072
+      - '9092:9092'
+      - '8085:8082'
+    volumes:
+      - h2-data:/opt/h2-data
     networks:
       - my_services
+#  topup-schedule-server:
+#    container_name: topup-schedule-server
+#    build:
+#      context: /topup-schedule
+#      dockerfile: Dockerfile
+#    image: topup-schedule:latest
+#    ports:
+#      - 8081:8072
+#    networks:
+#      - my_services
 #  topup-admin-server:
 #    container_name: topup-admin-server
 #    build:
