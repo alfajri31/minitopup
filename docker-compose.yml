@@ -20,7 +20,7 @@ services:
 #      - 8080:8071
 #    networks:
 #      - my_services
-  h2: #use jdbc:h2:tcp://localhost/test
+  h2: #use jdbc:h2:tcp://localhost:9092/~./test
     container_name: h2
     build:
       context: /
